@@ -1,0 +1,13 @@
+<?xml version='1.0' encoding='utf-8'?>
+<!DOCTYPE hibernate-mapping PUBLIC
+    "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+    "http://www.hibernate.org/dtd/hibernate-mapping-3.0.dtd">
+<hibernate-mapping>
+
+    <class name="cn.com.eship.model.Baidubaike" table="t_baidubaike">
+        <id name="id" column="id"/>
+        <property name="pagUrl" column="pag_url"/>
+        <property name="imgUrl" column="img_url"/>
+        <many-to-one name="epidemic" column="epidemic_id" class="cn.com.eship.model.Epidemic" not-null="true" fetch="join"/>
+    </class>
+</hibernate-mapping>

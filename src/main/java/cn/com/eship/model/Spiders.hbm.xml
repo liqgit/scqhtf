@@ -1,0 +1,18 @@
+<?xml version='1.0' encoding='utf-8'?>
+<!DOCTYPE hibernate-mapping PUBLIC
+        "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+        "http://www.hibernate.org/dtd/hibernate-mapping-3.0.dtd">
+<hibernate-mapping>
+
+    <class name="cn.com.eship.model.Spiders" table="t_spiders" schema="tjrsms">
+        <id name="id" column="id">
+            <generator class="uuid"/>
+        </id>
+        <property name="name" column="name"/>
+        <property name="startUrl" column="start_url"/>
+        <property name="titleXpath" column="title_xpath"/>
+        <property name="contentXpath" column="content_xpath"/>
+        <property name="pageUrlXpath" column="page_url_xpath"/>
+        <property name="fetchUrlXpath" column="fetch_url_xpath"/>
+    </class>
+</hibernate-mapping>

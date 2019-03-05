@@ -1,0 +1,18 @@
+<?xml version='1.0' encoding='utf-8'?>
+<!DOCTYPE hibernate-mapping PUBLIC
+        "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+        "http://www.hibernate.org/dtd/hibernate-mapping-3.0.dtd">
+<hibernate-mapping>
+    <class name="cn.com.eship.model.OieHtml" table="t_oie_html" schema="tjrsms">
+        <id name="reportId" column="report_id"/>
+        <property name="reportLink" column="report_link"/>
+        <property name="country" column="country"/>
+        <property name="date" column="date"/>
+        <property name="disease" column="disease"/>
+        <property name="reasonForNotification" column="reason_for_notification"/>
+        <property name="diseaseManifestation" column="disease_manifestation"/>
+        <property name="outbreaks" column="outbreaks"/>
+        <property name="dateResolved" column="dateResolved"/>
+        <property name="html" column="html"/>
+    </class>
+</hibernate-mapping>

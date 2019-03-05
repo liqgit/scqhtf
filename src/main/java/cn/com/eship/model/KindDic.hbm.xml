@@ -1,0 +1,17 @@
+<?xml version='1.0' encoding='utf-8'?>
+<!DOCTYPE hibernate-mapping PUBLIC
+        "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+        "http://www.hibernate.org/dtd/hibernate-mapping-3.0.dtd">
+<hibernate-mapping>
+
+    <class name="cn.com.eship.model.KindDic" table="t_kind_dic" schema="tjrsms">
+        <id name="id">
+            <column name="id" sql-type="varchar(32)" length="32"/>
+            <generator class="uuid"/>
+        </id>
+        <property name="kindName">
+            <column name="kind_name" sql-type="varchar(300)" length="300" not-null="true"/>
+        </property>
+        <property name="level" column="level"/>
+    </class>
+</hibernate-mapping>

@@ -1,0 +1,12 @@
+<?xml version='1.0' encoding='utf-8'?>
+<!DOCTYPE hibernate-mapping PUBLIC
+    "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+    "http://www.hibernate.org/dtd/hibernate-mapping-3.0.dtd">
+<hibernate-mapping>
+
+    <class name="cn.com.eship.model.OieWorldRegionEntity" table="oie_world_region" schema="tjrsms">
+        <id name="id" column="id"/>
+        <property name="regionNameEng" column="region_name_eng"/>
+        <property name="regionNameCn" column="region_name_cn"/>
+    </class>
+</hibernate-mapping>

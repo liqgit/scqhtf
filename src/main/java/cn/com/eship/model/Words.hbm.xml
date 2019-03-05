@@ -1,0 +1,16 @@
+<?xml version='1.0' encoding='utf-8'?>
+<!DOCTYPE hibernate-mapping PUBLIC
+        "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+        "http://www.hibernate.org/dtd/hibernate-mapping-3.0.dtd">
+<hibernate-mapping>
+
+    <class name="cn.com.eship.model.Words" table="t_words" schema="tjrsms">
+        <id name="id" column="id">
+            <generator class="uuid"/>
+        </id>
+        <property name="word">
+            <column name="word" sql-type="varchar(300)" length="300" not-null="true"/>
+        </property>
+        <many-to-one name="kindDic" column="kind_id" class="cn.com.eship.model.KindDic" not-null="true" fetch="join"/>
+    </class>
+</hibernate-mapping>

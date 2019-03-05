@@ -1,0 +1,24 @@
+<?xml version='1.0' encoding='utf-8'?>
+<!DOCTYPE hibernate-mapping PUBLIC
+    "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+    "http://www.hibernate.org/dtd/hibernate-mapping-3.0.dtd">
+<hibernate-mapping>
+
+    <class name="cn.com.eship.model.OieEpidemiologicalEventEntity" table="oie_epidemiological_event" schema="tjrsms">
+        <composite-id mapped="true" class="cn.com.eship.model.OieEpidemiologicalEventEntityPK">
+            <key-property name="id" column="id"/>
+            <key-property name="report" column="report"/>
+        </composite-id>
+        <property name="country" column="country"/>
+        <property name="date" column="date"/>
+        <property name="disease" column="disease"/>
+        <property name="reason" column="reason"/>
+        <property name="manifestation" column="manifestation"/>
+        <property name="outbreaks" column="outbreaks"/>
+        <property name="dateRes" column="date_res"/>
+        <many-to-one name="oieWorldRegionEntity" column="country_id" class="cn.com.eship.model.OieWorldRegionEntity" not-null="true"
+                     fetch="join"/>
+        <many-to-one name="oieDiseasesEntity" column="disease_id" class="cn.com.eship.model.OieDiseasesEntity" not-null="true"
+                     fetch="join"/>
+    </class>
+</hibernate-mapping>
